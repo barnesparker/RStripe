@@ -19,9 +19,9 @@
 
 .convert_to_url <- function(args) {
     arg_list <- lapply(seq_along(args), function(i) {
-          paste0("?",names(args)[[i]],"=",args[[i]])
+          paste0(names(args)[[i]],"=",args[[i]])
         })
-    paste(arg_list,collapse='')
+    paste0("?", paste(arg_list,collapse="&"))
 }
 
 # can't think of good name
